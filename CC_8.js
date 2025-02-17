@@ -42,3 +42,9 @@ calculateRentalCost(3, "Economy", true); // Total Rental Cost: $180
 calculateRentalCost(5, "Luxury", false); // Total Rental Cost: $500
 
 // Task 5 Loan Payment Calculation
+function calculateLoanPayment(principal, rate, time){
+    const totalPayment = principal +(principal * rate * time);
+    console.log(`Total Payment: $${totalPayment.toFixed(2)}`);
+}; // Created a function that returns a loan payment
+calculateLoanPayment(1000, 0.05, 2); // Total Payment: $1100,00
+calculateLoanPayment(5000, 0.07, 3); // Total Payment: $6050.00
