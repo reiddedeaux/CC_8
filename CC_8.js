@@ -55,3 +55,17 @@ function filterLargeTransactions(transactions, filterFunction){
     console.log("Large Transactions:", result);
 }; // Created a higher-order function to find transations over $1000
 filterLargeTransactions(transactions, amount => amount > 1000)// Large Transactions: 1500, 3200, 2500
+// Task 7 Shopping Cart Tracker
+function createCartTracker(){
+    let total = 0;
+    return function(amount){
+        total =+ amount;
+        console.log(`Total Cart Value: $${total}`);
+    };
+}; // Created a function that can add items to a cart and maintain a running total
+let cart = createCartTracker();
+cart(20); // Total Cart Value: $20
+cart(35); // Total Cart Value: $35
+
+
+
