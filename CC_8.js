@@ -26,3 +26,19 @@ const calculateServiceFee = (amount, serviceType) => {
 calculateServiceFee(200, "Premium"); // Service Fee: $30.00
 calculateServiceFee(500, "Standard"); // Service Fee: $50.00
 
+// Task 4 Car Rental Cost Calculation
+function calculateRentalCost(days, cartype, insurance = false) {
+    let dailyRate = 0;
+    if (cartype === "Economy") dailyRate = 40;
+    else if(cartype === "Standard") dailyRate = 60;
+    else if(cartype === "Luxury") dailyRate = 100;
+    let totalCost = days * dailyRate;
+    if (insurance){
+        totalCost += days * 20;
+    }
+    console.log(`Total Rental Cost : $${totalCost}`)
+}; // Created a function that calculate car rental cost at 3 different levels
+calculateRentalCost(3, "Economy", true); // Total Rental Cost: $180
+calculateRentalCost(5, "Luxury", false); // Total Rental Cost: $500
+
+// Task 5 Loan Payment Calculation
